@@ -1,0 +1,27 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/classes";
+@import "sections/navbar";
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+}
+
+body {
+  @include theme(background, $color-light-bg, $color-dark-bg);
+  @include theme(color, $color-dark, $color-light);
+  font-family: $font-base-family;
+  font-size: $font-base-size;
+  overflow-y: hidden;
+}
+
+.btns{
+  @extend .scoop;
+   background: $color-chocolate;
+  &:after {
+    background: $color-chocolate;
+  }
+}
+
