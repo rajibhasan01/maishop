@@ -41,7 +41,6 @@
     }
   }
 
-
  .cart_icon{
     font-size: 20px;
   }
@@ -49,13 +48,11 @@
 
 
 
-
 .navBox{
-    background-color: #fceb7a;
+    background-color: $color-yellow;
     width: fit-content;
     height: 100vh;
     padding-top: 10px;
-    // z-index: 10!important;
     position: absolute;
 
     .imag {
@@ -92,3 +89,62 @@
     }
 
 }
+
+
+
+.menu-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+    .menu-btn_burger{
+         width: 25px;
+         height: 3px;
+         background: black;
+         border-radius: 15px;
+         transition: all .5s ease-in-out;
+
+         &::before,
+         &::after{
+               content: '';
+               position: absolute;
+               width: 25px;
+               height: 3px;
+               background: black;
+               border-radius: 15px;
+               transition: all .5s ease-in-out;
+               }
+
+         &::before{
+               transform: translateY(-7px);
+               }
+
+         &::after{
+               transform:translateY(7px);
+               }
+
+         }
+
+      &.open .menu-btn_burger{
+          transform: translateX(-50px);
+          background: transparent;
+          box-shadow: none;
+        }
+
+      &.open .menu-btn_burger::before{
+          transform: rotate(45deg) translate(35px, -35px);
+        }
+
+      &.open .menu-btn_burger::after{
+          transform: rotate(-45deg) translate(35px, 35px);
+        }
+}
+
+
+
+

@@ -1,7 +1,7 @@
 .topBar{
-     @include theme(background, $color-dim-bg);
+     @include theme(background, $color-yellow);
      @include theme(color, $color-gray);
-     // height: 40px;
+     height: 35px;
      font-weight: 500;
      
 }
@@ -14,3 +14,6 @@
      font-size: 12px;
 }
 
+.imag{
+     width: 40px;
+}

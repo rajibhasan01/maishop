@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavHeader from '../NavHeader/NavHeader';
 import TopHeader from '../TopHeader/TopHeader';
 
 const Header = () => {
+    const [toggle, setToggle] = useState(false);
+
     return (
         <div>
-            <TopHeader />
-            <NavHeader />
+            <TopHeader setToggle={setToggle} toggle={toggle} />
+            <NavHeader toggle={toggle} />
         </div>
     );
 };
