@@ -1,7 +1,9 @@
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/classes";
-@import "sections/navbar";
+@import "sections/Header/topHeader";
+@import "sections/Header/navHeader";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Shadows+Into+Light&display=swap');
 
 * {
   box-sizing: border-box;
@@ -10,18 +12,12 @@
 }
 
 body {
-  @include theme(background, $color-light-bg, $color-dark-bg);
-  @include theme(color, $color-dark, $color-light);
-  font-family: $font-base-family;
+  @include theme(background, $color-light-bg);
+  @include theme(color, $color-dark);
+  font-family: $poppins;
   font-size: $font-base-size;
   overflow-y: hidden;
 }
 
-.btns{
-  @extend .scoop;
-   background: $color-chocolate;
-  &:after {
-    background: $color-chocolate;
-  }
-}
+
 

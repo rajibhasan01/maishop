@@ -1,9 +1,8 @@
-// theme
-$current-theme: light;
 
 // colors
 $color-dark-bg: #3b3b41;
-$color-light-bg: #f3f3f3;
+$color-dim-bg: #f3f3f3;
+$color-light-bg: white;
 $color-dark-border: #5250507e;
 
 $color-light: #a2a5b9;
@@ -11,6 +10,8 @@ $color-dark: #1d2129;
 $color-primary: #385898;
 $color-danger: red;
 $color-success: green;
+$color-gray: #646464;
+
 
 $color-chocolate: #b98160;
 $color-vanilla: #fae8b6;
@@ -21,4 +22,6 @@ $color-tan: tan;
 
 // font
 $font-base-size: 14px;
-$font-base-family: Helvetica;
+$font-small-size: 18px;
+$poppins: 'Poppins', sans-serif;
+

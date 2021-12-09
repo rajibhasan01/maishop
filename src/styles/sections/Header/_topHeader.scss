@@ -1,0 +1,16 @@
+.topBar{
+     @include theme(background, $color-dim-bg);
+     @include theme(color, $color-gray);
+     // height: 40px;
+     font-weight: 500;
+     
+}
+
+.topHeaderBox{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 12px;
+}
+
