@@ -26,7 +26,7 @@ const TopHeader = ({ setToggle, toggle }) => {
 
                 <div className='d-flex'>
                     <div className="">Login <i className="fas fa-sign-in-alt ps-1"></i></div>
-                    <Ri.RiShoppingCartLine className='cart_icon my-auto ms-2 d-md-none' />
+                    <Ri.RiShoppingCartLine className='cart_icon my-auto ms-2 d-md-none fs-6' />
 
                 </div>
             </Container>
