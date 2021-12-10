@@ -3,6 +3,7 @@
 $color-dark-bg: #3b3b41;
 $color-dim-bg: #f3f3f3;
 $color-light-bg: white;
+$color-transparent-bg: transparent;
 $color-dark-border: #5250507e;
 
 $color-light: #a2a5b9;
@@ -25,4 +26,10 @@ $color-tan: tan;
 $font-base-size: 14px;
 $font-small-size: 18px;
 $poppins: 'Poppins', sans-serif;
+
+// height & width
+$height_full: 100%;
+$width_full: 100%;
+$height-base-size: 50px;
+$margin-base-size: 8px;
 

@@ -3,6 +3,27 @@
 }
 
 
-@mixin theme($property, $color ) {
-    #{$property}: $color;
+@mixin theme($property, $color) {
+    @if $color == $color-transparent-bg and $property == background{
+      #{$property}: $color;
+      color: $color-dark;
+    }
+    @else if $color == $color-dark and  $property == background{
+      #{$property}: $color;
+      color: $color-light-bg;
+    }
+
+    @else if $color == $color-primary and  $property == background{
+      #{$property}: $color;
+      color: $color-light-bg;
+    }
+
+    @else{
+      #{$property}: $color;
+    }
+}
+
+@mixin hover($color){
+  @include theme(background, $color);
+  @extend .cursor;
 }

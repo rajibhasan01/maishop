@@ -1,0 +1,16 @@
+.searchBar{
+    width: 100%;
+    height: $height-base-size;
+    margin-top: $margin-base-size;
+    margin-bottom: $margin-base-size;
+}
+
+.borderRight{
+    border: none;
+    border-right: 1px solid black;
+    border-radius: 0px;
+}
+
+.cursor{
+    cursor: pointer;
+}
