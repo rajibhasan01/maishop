@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DropDown = () => {
+const MaiShopOffer = () => {
 
     return (
         <figure className="offer">
@@ -14,4 +14,4 @@ const DropDown = () => {
     );
 };
 
-export default DropDown;
+export default MaiShopOffer;

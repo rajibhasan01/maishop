@@ -1,5 +1,5 @@
 import React from 'react';
-import DropDown from './DropDown';
+import MaiShopOffer from './MaiShopOffer';
 import Offer from './Offer';
 import Search from './Search';
 
@@ -10,7 +10,7 @@ const SearchHeader = () => {
             <div className="row mt-2">
 
                 <div className="col-md-3">
-                    <DropDown />
+                    <MaiShopOffer />
                 </div>
 
                 <div className="col-md-6">

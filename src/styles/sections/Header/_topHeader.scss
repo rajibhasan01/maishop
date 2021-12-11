@@ -11,6 +11,17 @@
           align-items: center;
           font-size: 12px;
 
+          .topHeaderItem{
+               &:hover{
+                    @include theme(color, $color-dark, null);
+               }
+          }
+
+          .fab:hover{
+               @include theme(color, $color-lemon-dark , null);
+          }
+
+
           .dropdownn{
                position: relative;
 
