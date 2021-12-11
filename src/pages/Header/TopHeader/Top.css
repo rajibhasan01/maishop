@@ -1,0 +1,29 @@
+.dropdownn{
+    position: relative;
+}
+
+.active,
+.link:hover{
+    color: black;
+}
+
+.dropdownn-menu{
+    position: absolute;
+    right: 0;
+    top: calc(100% + .25rem);
+    background-color: white;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.active  {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}

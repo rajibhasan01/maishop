@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import * as Ri from 'react-icons/ri';
+import './Top.css';
 
 
 const TopHeader = ({ setToggle, toggle }) => {
+    const [loginToggle, setLoginToggle] = useState(false);
+
     const handleToggleMenu = () => setToggle(!toggle);
+
+    const handleLoginToggle = (e) => setLoginToggle(!loginToggle);
 
     return (
         <div className="topBar">
@@ -25,7 +30,15 @@ const TopHeader = ({ setToggle, toggle }) => {
                 </div>
 
                 <div className='d-flex cursor'>
-                    <div>Login <i className="fas fa-sign-in-alt ps-1"></i></div>
+                    <div className="dropdownn">
+
+                        <div onClick={handleLoginToggle} className={loginToggle ? "link active" : "link"}>Login <i className="fas fa-sign-in-alt ps-1"></i></div>
+
+                        <div className={loginToggle ? "dropdownn-menu active" : "dropdownn-menu"}>
+                            Dropdown content
+                        </div>
+                    </div>
+
                     <Ri.RiShoppingCartLine className='cart_icon my-auto ms-2 d-md-none fs-6' />
                 </div>
             </Container>
