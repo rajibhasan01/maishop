@@ -1,6 +1,6 @@
 
 // colors
-$color-dark-bg: #3b3b41;
+
 $color-dim-bg: #f3f3f3;
 $color-light-bg: white;
 $color-transparent-bg: transparent;
@@ -8,24 +8,25 @@ $color-dark-border: #5250507e;
 
 $color-light: #a2a5b9;
 $color-dark: #1d2129;
-$color-primary: #385898;
-$color-danger: red;
-$color-success: green;
+$color-dark-light: #1f242c;
+
 $color-gray: #646464;
-$color-yellow: #fceb7a;
+$color-yellow: #F8EA8C;
+$color-yellow-dark: #E1C340;
 
+$color-orange: rgb(255, 145, 0);
+$color-lemon: #A4E8E0;
+$color-lemon-dark: #4CD7D0;
 
-$color-chocolate: #b98160;
-$color-vanilla: #fae8b6;
-$color-strawberry: pink;
-$color-orange: orange;
-$color-lemon: #5fd592;
-$color-tan: tan;
 
 // font
 $font-base-size: 14px;
 $font-small-size: 18px;
 $poppins: 'Poppins', sans-serif;
+$bolder: 700;
+$bold: 600;
+$semi-bold: 500;
+$thin: 300;
 
 // height & width
 $height_full: 100%;

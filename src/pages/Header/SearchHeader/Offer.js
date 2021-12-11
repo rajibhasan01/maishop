@@ -3,11 +3,11 @@ import React from 'react';
 const Offer = () => {
     return (
         <figure className="offer">
-            <blockquote className="blockquote">
+            <blockquote className="blockquote textTag">
                 <p>BLACK FRIDAY</p>
             </blockquote>
-            <figcaption className="blockquote-footer">
-                Exclusive offer <cite title="Source Title">"Buy & get 45% discount!"</cite>
+            <figcaption className="blockquote-footer textTag">
+                Exclusive <cite title="Source Title">"buy & get 45% off!"</cite>
             </figcaption>
         </figure>
 

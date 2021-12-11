@@ -1,5 +1,7 @@
 .dropDown{
     @extend .searchBar;
+    @include theme(background, $color-transparent-bg, light);
+    @include bordered(white, 1px);
     &:focus{
         box-shadow: none!important;
     }
@@ -11,23 +13,36 @@
 
 } 
 
+
+// black friday offer container
 .offer{
     @extend .searchBar;
-    @include bordered($color-gray, 1px);
-    border-radius: 5px;
+    @include bordered(white, 1px);
     text-align: center;
+    position: relative;
+    font-weight: 700;
+
     .blockquote-footer{
         line-height: 10px;
-        }
-    &:hover{
-        @include hover($color-dark);
+        font-weight: 400;
     }
+
+    &:before {
+	    @include before($color-dark);
+	}
+
+    &:hover{
+       @include hover($color-light-bg);
+    }
+
 }
 
+
+// input search container box
 .search{
     @extend .searchBar;
     @include bordered($color-gray, 1px);
-    border-radius: 5px;
+    margin-left: 1px;
     text-align: center;
     display: flex;
 
@@ -35,7 +50,6 @@
         width: 75%;
         height: $height_full;
         @extend .borderRight;
-        border-radius: 5px 0 0 5px;
         display: flex;
         padding-left: 10px;
 
@@ -48,11 +62,11 @@
        width: $width_full;
        height: $height_full;
        @extend .borderRight;
-       @include theme(background, $color-transparent-bg);
+       @include theme(background, $color-transparent-bg, light);
 
         &:focus{
             box-shadow: none!important;
-            @include theme(background, $color-transparent-bg);
+            @include theme(background, $color-transparent-bg, light);
             }
     }
 
@@ -60,18 +74,24 @@
         transform: translate(0px, 50px)!important;
     }
 
-    .searchIcon{
-        @include theme(background, $color-yellow);
+    .searchBox{
+        @include theme(background, $color-yellow, light);
         @extend .cursor;
         border-radius: 0 4px 4px 0;
         width: 25%;
         font-size: 16px;
         height: $height_full;
         line-height: 48px;
+        position: relative;
+
+        &:before {
+	        @include before($color-yellow-dark);
+	    }
 
         &:hover{
-            @include hover($color-primary);
+            @include hover($color-light-bg);
         }
+
     }
 
 }

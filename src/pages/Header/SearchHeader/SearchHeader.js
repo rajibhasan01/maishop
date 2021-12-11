@@ -5,7 +5,7 @@ import Search from './Search';
 
 const SearchHeader = () => {
     return (
-        <div className='container-fluid px-5'>
+        <div className='container-fluid px-md-5'>
 
             <div className="row mt-2">
 

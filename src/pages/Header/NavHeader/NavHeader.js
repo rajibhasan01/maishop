@@ -8,7 +8,7 @@ const NavHeader = ({ toggle }) => {
     return (
         <div>
             <div className="navDesign container-fluid px-5 mt-2 d-none d-md-flex">
-                <div className="image">
+                <div className="image cursor">
                     <img src="https://i.ibb.co/fY3z6BC/isla-500x500-37673648-ak449n55-removebg-preview.png" alt="" className="img-fluid" />
                 </div>
 
@@ -29,7 +29,7 @@ const NavHeader = ({ toggle }) => {
                 </ul>
 
 
-                <Ri.RiShoppingCartLine className='cart_icon my-auto' />
+                <Ri.RiShoppingCartLine className='cart_icon my-auto cursor' />
 
             </div>
 
@@ -37,8 +37,6 @@ const NavHeader = ({ toggle }) => {
             <div className={toggle ? "d-block d-md-none" : "d-none"}>
 
                 <div className='navBox'>
-
-
                     <ul className="my-auto uidesign">
                         <li><NavLink to="/home" className="md-navlink" clas activeClassName="selected"> Home</NavLink></li>
 
@@ -51,8 +49,8 @@ const NavHeader = ({ toggle }) => {
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected"> Contact</NavLink></li>
 
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected"> FAQ</NavLink></li>
-
                     </ul>
+
                     <ul className="mt-5 pt-5 uidesign">
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected">Free Delivery </NavLink></li>
 
@@ -61,6 +59,7 @@ const NavHeader = ({ toggle }) => {
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected">Follow Us </NavLink></li>
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected"> <i className="fab fa-facebook-f pe-2"> </i> <i className="fab fa-twitter pe-2"></i> <i className="fab fa-instagram"></i></NavLink></li>
                     </ul>
+
                 </div>
             </div>
         </div>

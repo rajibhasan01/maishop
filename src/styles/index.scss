@@ -13,8 +13,8 @@
 }
 
 body {
-  @include theme(background, $color-light-bg);
-  @include theme(color, $color-dark);
+  @include theme(background, $color-light-bg, light);
+  @include theme(color, $color-dark, null);
   font-family: $poppins;
   font-size: $font-base-size;
   overflow-y: hidden;

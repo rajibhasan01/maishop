@@ -1,6 +1,6 @@
 .topBar{
-     @include theme(background, $color-yellow);
-     @include theme(color, $color-gray);
+     @include theme(background, $color-yellow, light);
+     @include theme(color, $color-gray, null);
      height: 35px;
      font-weight: 500;
      
@@ -12,6 +12,7 @@
      justify-content: space-between;
      align-items: center;
      font-size: 12px;
+
 }
 
 .imag{

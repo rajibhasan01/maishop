@@ -57,38 +57,28 @@
     z-index: 9999;
 
     .imag {
-    margin-left: 50px;
-    width: 50px;
+      margin-left: 50px;
+      width: 50px;
     }
 
     .uidesign{
-    padding-left: 0;
-    list-style: none;
+      padding-left: 0;
+      list-style: none;
 
-        li{
-        margin-top: 20px;
-        width:100%;
 
-           &:hover{
-           background-color: rgb(118, 117, 117);
-           }
-
-          .md-navlink{
+      .md-navlink{
           text-decoration: none;
-          color: #140f26;
-          padding: 5px 50px;
+          margin-top: 10px;
+          display: block;
+          color: $color-dark;
+          padding: 5px 41px;
 
-               &:hover{
-                color: #ffffff!important;
-                }
-
+          &:hover{
+            @include theme(background, $color-gray, dark)
           }
 
         }
-
-
     }
-
 }
 
 
@@ -98,7 +88,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35px;
     height: 35px;
     cursor: pointer;
     transition: all .5s ease-in-out;
@@ -106,7 +95,7 @@
     .menu-btn_burger{
          width: 25px;
          height: 3px;
-         background: black;
+         background: $color-dark-light;
          border-radius: 15px;
          transition: all .5s ease-in-out;
 
@@ -116,7 +105,7 @@
                position: absolute;
                width: 25px;
                height: 3px;
-               background: black;
+               background: $color-dark-light;
                border-radius: 15px;
                transition: all .5s ease-in-out;
                }

@@ -9,7 +9,7 @@ const Search = ({ _id }) => {
     }
     return (
         <div className='search'>
-            <input type="text" className="" name="" id="" />
+            <input type="text" className="" name="" id="" placeholder='Find your product' />
             <Dropdown>
                 <Dropdown.Toggle className="dropDownSearch">
                     <Bi.BiMenuAltLeft className="me-2" /><span className='d-none d-md-inline'>All Category</span>
@@ -26,8 +26,8 @@ const Search = ({ _id }) => {
                 </Dropdown.Menu>
             </Dropdown >
 
-            <div className='searchIcon'>
-                <p><span className='d-none d-xl-inline'>Search</span> <Bi.BiSearch /></p>
+            <div className='searchBox'>
+                <p><span className='d-none d-xl-inline textTag'>Search</span> <Bi.BiSearch className='textTag' /></p>
             </div>
         </div>
     );
