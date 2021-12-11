@@ -9,7 +9,7 @@ const TopHeader = ({ setToggle, toggle }) => {
 
     const handleToggleMenu = () => setToggle(!toggle);
 
-    const handleLoginToggle = (e) => setLoginToggle(!loginToggle);
+    const handleLoginToggle = () => setLoginToggle(!loginToggle);
 
     return (
         <div className="topBar">

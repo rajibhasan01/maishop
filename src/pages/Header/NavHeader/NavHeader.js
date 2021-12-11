@@ -38,7 +38,7 @@ const NavHeader = ({ toggle }) => {
 
                 <div className='navBox'>
                     <ul className="my-auto uidesign">
-                        <li><NavLink to="/home" className="md-navlink" clas activeClassName="selected"> Home</NavLink></li>
+                        <li><NavLink to="/home" className="md-navlink" activeClassName="selected"> Home</NavLink></li>
 
                         <li><NavLink to="/skills" className="md-navlink" activeClassName="selected"> Shop</NavLink></li>
 
