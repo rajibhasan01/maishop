@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import * as Ri from 'react-icons/ri';
-import './Top.css';
-
 
 const TopHeader = ({ setToggle, toggle }) => {
     const ref = useRef()
@@ -51,10 +49,17 @@ const TopHeader = ({ setToggle, toggle }) => {
                 <div className='d-flex cursor'>
                     <div className="dropdownn" ref={ref}>
 
-                        <div onClick={() => setIsMenuOpen(oldState => !oldState)} className={isMenuOpen ? "link active" : "link"}>Login <i className="fas fa-sign-in-alt ps-1"></i></div>
+                        <div onClick={() => setIsMenuOpen(oldState => !oldState)} className={isMenuOpen ? "active" : "link"}>Login <i className="fas fa-sign-in-alt ps-1"></i></div>
 
                         <div className={isMenuOpen ? "dropdownn-menu active" : "dropdownn-menu"}>
-                            Dropdown content
+                            <form action="">
+
+                                <input type="email" name="email" id="email" placeholder='Enter email' />
+                                <input type="password" name="password" id="password" placeholder='Enter password' />
+
+                                <input className="loginBtn" type="submit" value="Login" />
+                            </form>
+                            <p>New User? <span>Register Here</span></p>
                         </div>
                     </div>
 

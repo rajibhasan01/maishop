@@ -37,7 +37,7 @@ const NavHeader = ({ toggle }) => {
             <div className={toggle ? "d-block d-md-none" : "d-none"}>
 
                 <div className='navBox'>
-                    <ul className="my-auto uidesign">
+                    <ul className="my-auto ulDesign">
                         <li><NavLink to="/home" className="md-navlink" activeClassName="selected"> Home</NavLink></li>
 
                         <li><NavLink to="/skills" className="md-navlink" activeClassName="selected"> Shop</NavLink></li>
@@ -51,7 +51,7 @@ const NavHeader = ({ toggle }) => {
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected"> FAQ</NavLink></li>
                     </ul>
 
-                    <ul className="mt-5 pt-5 uidesign">
+                    <ul className="mt-5 pt-5 ulDesign">
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected">Free Delivery </NavLink></li>
 
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected">Returns Policy </NavLink></li>

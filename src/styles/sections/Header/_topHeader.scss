@@ -3,18 +3,71 @@
      @include theme(color, $color-gray, null);
      height: 35px;
      font-weight: 500;
-     
+
+     .topHeaderBox{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 12px;
+
+          .dropdownn{
+               position: relative;
+
+               .active,
+               .link:hover{
+                    color: $color-dark;
+               }
+
+               .dropdownn-menu{
+                    position: absolute;
+                    right: 0;
+                    top: calc(100% + .25rem);
+                    background-color: $color-light-bg;
+                    padding: .75rem;
+                    border-radius: .25rem;
+                    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+                    z-index: 1;
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translateY(-10px);
+                    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+
+                    input{
+                         @extend .borderBottom;
+                         margin-top: 10px;
+                         
+                         &:focus{
+                              outline: none;
+                         }
+                    }
+
+                    .loginBtn{
+                         @include theme(background, #4CD7D0, dark);
+                         border: none;
+                         border-radius: 5px;
+                         padding: 2px 10px;
+
+                         &:hover{
+                              @include theme(background, #34b6b0, dark);
+                         }
+                    }
+
+                    p{
+                         padding-top: 10px;
+                         margin-bottom: 0;
+                         
+                         span{
+                              @include theme(color, $color-lemon-dark, null);
+                         }
+                    }
+               }
+               .active  {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: auto;
+               }
+          }
+     }
 }
 
-.topHeaderBox{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     align-items: center;
-     font-size: 12px;
-
-}
-
-.imag{
-     width: 40px;
-}
