@@ -1,15 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import * as Ri from 'react-icons/ri';
 import './Top.css';
 
 
 const TopHeader = ({ setToggle, toggle }) => {
-    const [loginToggle, setLoginToggle] = useState(false);
+    const ref = useRef()
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
     const handleToggleMenu = () => setToggle(!toggle);
 
-    const handleLoginToggle = () => setLoginToggle(!loginToggle);
+    useEffect(() => {
+        const checkIfClickedOutside = e => {
+            // If the menu is open and the clicked target is not within the menu,
+            // then close the menu
+            if (isMenuOpen && ref.current && !ref.current.contains(e.target)) {
+                setIsMenuOpen(false)
+            }
+        }
+
+        document.addEventListener("mousedown", checkIfClickedOutside)
+
+        return () => {
+            // Cleanup the event listener
+            document.removeEventListener("mousedown", checkIfClickedOutside)
+        }
+    }, [isMenuOpen])
+
+
 
     return (
         <div className="topBar">
@@ -30,11 +49,11 @@ const TopHeader = ({ setToggle, toggle }) => {
                 </div>
 
                 <div className='d-flex cursor'>
-                    <div className="dropdownn">
+                    <div className="dropdownn" ref={ref}>
 
-                        <div onClick={handleLoginToggle} className={loginToggle ? "link active" : "link"}>Login <i className="fas fa-sign-in-alt ps-1"></i></div>
+                        <div onClick={() => setIsMenuOpen(oldState => !oldState)} className={isMenuOpen ? "link active" : "link"}>Login <i className="fas fa-sign-in-alt ps-1"></i></div>
 
-                        <div className={loginToggle ? "dropdownn-menu active" : "dropdownn-menu"}>
+                        <div className={isMenuOpen ? "dropdownn-menu active" : "dropdownn-menu"}>
                             Dropdown content
                         </div>
                     </div>
