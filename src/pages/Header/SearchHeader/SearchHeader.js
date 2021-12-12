@@ -7,13 +7,13 @@ const SearchHeader = () => {
     return (
         <div className='container-fluid px-md-5'>
 
-            <div className="row mt-2">
+            <div className="row mt-2 gx-2">
 
                 <div className="col-md-3">
                     <MaiShopOffer />
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-md-6 px-md-2">
                     <Search />
                 </div>
 

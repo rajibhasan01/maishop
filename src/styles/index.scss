@@ -17,7 +17,7 @@ body {
   @include theme(color, $color-dark, null);
   font-family: $poppins;
   font-size: $font-base-size;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 
