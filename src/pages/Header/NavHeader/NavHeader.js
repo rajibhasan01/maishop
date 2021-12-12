@@ -6,8 +6,8 @@ import { NavLink } from 'react-router-dom';
 const NavHeader = ({ toggle }) => {
 
     return (
-        <div>
-            <div className="navDesign container-fluid px-5 mt-2 d-none d-md-flex">
+        <div className='px-md-5'>
+            <div className="navDesign container-fluid mt-2 d-none d-md-flex">
                 <div className="image cursor">
                     <img src="https://i.ibb.co/fY3z6BC/isla-500x500-37673648-ak449n55-removebg-preview.png" alt="" className="img-fluid" />
                 </div>
