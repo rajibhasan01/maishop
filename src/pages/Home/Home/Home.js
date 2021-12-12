@@ -7,6 +7,7 @@ const Home = () => {
         <div>
             <Header />
             <Banner />
+            <Banner />
             {/* <h1>heloo</h1> */}
         </div>
     );

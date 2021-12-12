@@ -51,9 +51,10 @@
 .navBox{
     background-color: $color-yellow;
     width: fit-content;
-    height: 100vh;
+    height: calc(100% - 35px);
     padding-top: 10px;
-    position: absolute;
+    margin-top: -13px;
+    position: fixed;
     z-index: 9999;
 
     .imag {

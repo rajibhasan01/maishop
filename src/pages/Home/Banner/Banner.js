@@ -13,12 +13,12 @@ const Banner = () => {
                     <div className="col-12 col-md-3">
                         <div className="row g-2">
                             <div className="col-6 col-md-12 pb-md-1">
-                                <div className=''>
+                                <div className='w-100'>
                                     <img src="https://i.ibb.co/xsRHxFj/18899269.jpg" alt="" className='img-fluid' />
                                 </div>
                             </div>
                             <div className="col-6 col-md-12">
-                                <div className=''>
+                                <div className='w-100'>
                                     <img src="https://i.ibb.co/GJdBmVQ/18899255.jpg" alt="" className='img-fluid' />
                                 </div>
                             </div>

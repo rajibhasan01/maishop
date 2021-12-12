@@ -9,6 +9,7 @@ const Header = () => {
     return (
         <div>
             <TopHeader setToggle={setToggle} toggle={toggle} />
+            <div className="mt-5"></div>
             <NavHeader toggle={toggle} />
             <SearchHeader />
         </div>

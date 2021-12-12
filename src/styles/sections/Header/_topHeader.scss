@@ -3,6 +3,10 @@
      @include theme(color, $color-gray, null);
      height: 35px;
      font-weight: 500;
+     position: fixed;
+     width: 100%;
+     top: 0;
+     z-index: 10000;
 
      .topHeaderBox{
           display: flex;
