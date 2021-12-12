@@ -34,6 +34,17 @@
 		transition: .4s ease-out;
 }
 
+@mixin after($color){
+	  content: "";
+    width:0;
+    height: 1px;
+    background-color: $color;
+    margin: auto;
+    margin-left: 16px;
+    display: block;
+    transition: width 0.5s;
+}
+
 @mixin hover($color){
 	  @extend .cursor;
         .textTag{

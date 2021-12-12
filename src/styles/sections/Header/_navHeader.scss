@@ -8,35 +8,29 @@
 
   ul{
   
-  list-style: none;
-  display: flex;
+    list-style: none;
+    display: flex;
 
-  li {
+    li {
      
-     font-weight: 400;
+      font-weight: 400;
     
      .navlink{
-      text-decoration: none;
-      color: $color-dark;
-      padding: 0 15px 0 15px;
-      font-weight: 500;
+        text-decoration: none;
+        color: $color-dark;
+        padding: 0 15px 0 15px;
+        font-weight: 500;
 
-     }
+      }
 
-     &::after{
-     content: "";
-     width:0;
-     height: 1px;
-     background-color: $color-dark;
-     margin: auto;
-     margin-left: 16px;
-     display: block;
-     transition: width 0.5s;
-     }
+      &::after{
+        @include after($color-dark);
 
-     &:hover::after{
-     width: 30%;
-     }
+      }
+
+      &:hover::after{
+        width: 30%;
+      }
     
     }
   }

@@ -37,14 +37,7 @@
                     }
 
                     &::after{
-                         content: "";
-                         width:0;
-                         height: 1px;
-                         background-color: $color-dark;
-                         margin: auto;
-                         margin-left: 16px;
-                         display: block;
-                         transition: width 0.5s;
+                         @include after($color-dark);
                     }
 
                     &:hover::after{
