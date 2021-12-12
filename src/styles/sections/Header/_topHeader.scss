@@ -25,6 +25,35 @@
                @include theme(color, $color-lemon-dark , null);
           }
 
+          ul{
+               list-style: none;
+
+               li{
+                    .navlink{
+                    text-decoration: none;
+                    color: $color-dark;
+                    padding: 0 15px 0 15px;
+                    font-weight: 500;
+                    }
+
+                    &::after{
+                         content: "";
+                         width:0;
+                         height: 1px;
+                         background-color: $color-dark;
+                         margin: auto;
+                         margin-left: 16px;
+                         display: block;
+                         transition: width 0.5s;
+                    }
+
+                    &:hover::after{
+                         width: 30%;
+                    }
+    
+               }
+          }
+
 
           .dropdownn{
                position: relative;
@@ -85,4 +114,3 @@
           }
      }
 }
-
