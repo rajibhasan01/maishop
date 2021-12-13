@@ -1,3 +1,20 @@
+.BannerImgContainer{
+    position: relative;
+    .upperImage{
+        position: absolute;
+        top: 10%;
+        left: calc(100% - 50%);
+        transform: scale(0.4);
+        transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+        opacity: .9;
+
+        &:hover{
+            transform: scale(0.5) translateY(-15px);
+            opacity: 1;
+        }
+    }
+}
+
 .imgHover{
     position: relative;
     transition: .4s ease-out;
