@@ -1,0 +1,16 @@
+.imgHover{
+    position: relative;
+    transition: .4s ease-out;
+    &::before{
+        @include before($color-gray);
+        opacity: .1;
+        
+    }
+    &::after{
+        @include after_1($color-gray);
+        opacity: .1;
+    }
+    &:hover{
+        @include hover($color-gray);
+    }
+}

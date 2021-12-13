@@ -34,6 +34,20 @@
 		transition: .4s ease-out;
 }
 
+@mixin after_1($color){
+	  position: absolute; 
+		left: 0;
+		bottom: 0;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: $color;
+		transform-origin: 0 bottom 0;
+		transform: scaleX(1);
+		transition: .4s ease-out;
+}
+
 @mixin after($color){
 	  content: "";
     width:0;
@@ -47,11 +61,15 @@
 
 @mixin hover($color){
 	  @extend .cursor;
-        .textTag{
-            color: $color;
-        }
-        &:before {
+    .textTag{
+      color: $color;
+    }
+
+    &:before {
 			transform: scaleX(1);
+		}
+    &:after {
+			transform: scaleX(0);
 		}
 }
 
