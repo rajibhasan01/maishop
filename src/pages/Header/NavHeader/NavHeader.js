@@ -7,7 +7,7 @@ const NavHeader = ({ toggle }) => {
 
     return (
         <div className='px-md-5'>
-            <div className="navDesign container-fluid mt-2 d-none d-md-flex">
+            <div className="navDesign container-fluid d-none d-md-flex">
                 <div className="image cursor">
                     <img src="https://i.ibb.co/fY3z6BC/isla-500x500-37673648-ak449n55-removebg-preview.png" alt="" className="img-fluid" />
                 </div>
@@ -51,7 +51,7 @@ const NavHeader = ({ toggle }) => {
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected"> FAQ</NavLink></li>
                     </ul>
 
-                    <ul className="mt-5 pt-5 ulDesign">
+                    <ul className="ulDesign">
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected">Free Delivery </NavLink></li>
 
                         <li><NavLink to="/about" className="md-navlink" activeClassName="selected">Returns Policy </NavLink></li>

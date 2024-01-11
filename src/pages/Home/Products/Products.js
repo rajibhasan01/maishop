@@ -59,7 +59,7 @@ const Products = ({ value }) => {
   }
 
   return (
-    <div className="container mt-5 py-5">
+    <div className="container mt-5">
       {value ? (
         <div className="text-center">
           <AllProductsHeading />

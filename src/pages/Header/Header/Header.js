@@ -7,9 +7,9 @@ const Header = () => {
     const [toggle, setToggle] = useState(false);
 
     return (
-        <div>
+        <div className='sticky-top main-header pb-2'>
             <TopHeader setToggle={setToggle} toggle={toggle} />
-            <div className="mt-5"></div>
+            <div className=""></div>
             <NavHeader toggle={toggle} />
             <SearchHeader />
         </div>
