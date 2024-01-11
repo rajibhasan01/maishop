@@ -8,7 +8,7 @@ const SearchHeader = () => {
         <div className='px-md-5'>
             <div className='container-fluid'>
 
-                <div className="row mt-2 gx-2">
+                <div className="row gx-2">
 
                     <div className="col-md-3">
                         <MaiShopOffer />
