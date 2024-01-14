@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home/Home/Home";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import AllProducts from './pages/AllProducts/AllProducts';
+import SingleProduct from './pages/Home/SingleProduct/SingleProduct';
 
 
 function App() {
@@ -9,10 +10,9 @@ function App() {
     <AuthProvider>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+          <Route exact path="/" component={Home} />
           <Route exact path="/allproducts" component={AllProducts} />
+          <Route exact path="/products/:productID" component={SingleProduct} />
         </Switch>
       </Router>
     </AuthProvider>

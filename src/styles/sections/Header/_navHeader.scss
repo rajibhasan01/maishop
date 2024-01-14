@@ -1,139 +1,123 @@
 .navDesign {
- display: flex;
- justify-content: space-between;
- font-size: 14px;
-  .image{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  .image {
     width: 50px;
   }
 
-  ul{
-
+  ul {
     list-style: none;
     display: flex;
 
     li {
-
       font-weight: 400;
 
-     .navlink{
+      .navlink {
         text-decoration: none;
         color: $color-dark;
         padding: 0 10px 0 10px;
         font-weight: 500;
-
       }
 
-      &::after{
+      &::after {
         @include after($color-dark);
-
       }
 
-      &:hover::after{
+      &:hover::after {
         width: 30%;
       }
-
     }
   }
 
- .cart_icon{
+  .cart_icon {
     font-size: 20px;
   }
 }
 
+.navBox {
+  background-color: $color-yellow;
+  width: fit-content;
+  height: calc(100% - 35px);
+  padding-top: 10px;
+  margin-top: -13px;
+  position: fixed;
+  z-index: 9999;
 
+  .imag {
+    margin-left: 50px;
+    width: 50px;
+  }
 
-.navBox{
-    background-color: $color-yellow;
-    width: fit-content;
-    height: calc(100% - 35px);
-    padding-top: 10px;
-    margin-top: -13px;
-    position: fixed;
-    z-index: 9999;
+  .ulDesign {
+    padding-left: 0;
+    list-style: none;
 
-    .imag {
-      margin-left: 50px;
-      width: 50px;
+    .md-navlink {
+      text-decoration: none;
+      margin-top: 10px;
+      display: block;
+      color: $color-dark;
+      padding: 5px 41px;
+
+      &:hover {
+        @include theme(background, $color-gray, dark);
+      }
+
+      .fab:hover {
+        @include theme(color, $color-lemon-dark, null);
+      }
     }
-
-    .ulDesign{
-      padding-left: 0;
-      list-style: none;
-
-
-      .md-navlink{
-          text-decoration: none;
-          margin-top: 10px;
-          display: block;
-          color: $color-dark;
-          padding: 5px 41px;
-
-          &:hover{
-              @include theme(background, $color-gray, dark)
-          }
-
-          .fab:hover{
-              @include theme(color, $color-lemon-dark , null);
-          }
-
-
-        }
-    }
+  }
 }
 
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 
-.menu-btn{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 35px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
+  .menu-btn_burger {
+    width: 25px;
+    height: 3px;
+    background: $color-dark-light;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
 
-    .menu-btn_burger{
-         width: 25px;
-         height: 3px;
-         background: $color-dark-light;
-         border-radius: 15px;
-         transition: all .5s ease-in-out;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 3px;
+      background: $color-dark-light;
+      border-radius: 15px;
+      transition: all 0.5s ease-in-out;
+    }
 
-         &::before,
-         &::after{
-               content: '';
-               position: absolute;
-               width: 25px;
-               height: 3px;
-               background: $color-dark-light;
-               border-radius: 15px;
-               transition: all .5s ease-in-out;
-               }
+    &::before {
+      transform: translateY(-7px);
+    }
 
-         &::before{
-               transform: translateY(-7px);
-               }
+    &::after {
+      transform: translateY(7px);
+    }
+  }
 
-         &::after{
-               transform:translateY(7px);
-               }
+  &.open .menu-btn_burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
 
-         }
+  &.open .menu-btn_burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
 
-      &.open .menu-btn_burger{
-          transform: translateX(-50px);
-          background: transparent;
-          box-shadow: none;
-        }
-
-      &.open .menu-btn_burger::before{
-          transform: rotate(45deg) translate(35px, -35px);
-        }
-
-      &.open .menu-btn_burger::after{
-          transform: rotate(-45deg) translate(35px, 35px);
-        }
+  &.open .menu-btn_burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
 }
-
-
-
-

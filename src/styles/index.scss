@@ -5,7 +5,7 @@
 @import "sections/Header/navHeader";
 @import "sections/Header/searchHeader";
 @import "sections/Banner/banner";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Shadows+Into+Light&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Shadows+Into+Light&display=swap");
 
 * {
   box-sizing: border-box;
@@ -23,33 +23,31 @@ body {
 
 .topNav,
 .returns,
-.followUs{
+.followUs {
   display: none;
 }
 
-
-@media (min-width:770px) {
-  .topNav{
+@media (min-width: 770px) {
+  .topNav {
     display: flex;
-
   }
 }
 
-@media (min-width:1000px) {
-  .returns{
+@media (min-width: 1000px) {
+  .returns {
     display: inline;
   }
-  .topNav{
+  .topNav {
     margin-left: -14%;
   }
 }
 
-@media (min-width:1300px) {
-  .followUs{
+@media (min-width: 1300px) {
+  .followUs {
     display: inline;
   }
 
-  .topNav{
+  .topNav {
     margin-left: -19%;
   }
 }

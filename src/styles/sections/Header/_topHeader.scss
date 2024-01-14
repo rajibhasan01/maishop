@@ -1,114 +1,112 @@
-.main-header{
-     background-color: rgba(255,255,235,0.90);
-     backdrop-filter: blur(6px)
+.main-header {
+  background-color: rgba(255, 255, 235, 0.9);
+  backdrop-filter: blur(6px);
 }
 
-.topBar{
-     @include theme(background, $color-yellow, light);
-     @include theme(color, $color-gray, null);
-     height: 35px;
-     font-weight: 500;
-     position: fixed;
-     width: 100%;
-     top: 0;
-     z-index: 10000;
+.topBar {
+  @include theme(background, $color-yellow, light);
+  @include theme(color, $color-gray, null);
+  height: 35px;
+  font-weight: 500;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
 
-     .topHeaderBox{
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 12px;
+  .topHeaderBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
 
-          .topHeaderItem{
-               &:hover{
-                    @include theme(color, $color-dark, null);
-               }
+    .topHeaderItem {
+      &:hover {
+        @include theme(color, $color-dark, null);
+      }
+    }
+
+    .fab:hover {
+      @include theme(color, $color-lemon-dark, null);
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        .navlink {
+          text-decoration: none;
+          color: $color-dark;
+          padding: 0 15px 0 15px;
+          font-weight: 500;
+        }
+
+        &::after {
+          @include after($color-dark);
+        }
+
+        &:hover::after {
+          width: 30%;
+        }
+      }
+    }
+
+    .dropdownn {
+      position: relative;
+
+      .active,
+      .link:hover {
+        color: $color-dark;
+      }
+
+      .dropdownn-menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 0.25rem);
+        background-color: $color-light-bg;
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+
+        input {
+          @extend .borderBottom;
+          margin-top: 10px;
+
+          &:focus {
+            outline: none;
           }
+        }
 
-          .fab:hover{
-               @include theme(color, $color-lemon-dark , null);
+        .loginBtn {
+          @include theme(background, #4cd7d0, dark);
+          border: none;
+          border-radius: 5px;
+          padding: 2px 10px;
+
+          &:hover {
+            @include theme(background, #34b6b0, dark);
           }
+        }
 
-          ul{
-               list-style: none;
+        p {
+          padding-top: 10px;
+          margin-bottom: 0;
 
-               li{
-                    .navlink{
-                    text-decoration: none;
-                    color: $color-dark;
-                    padding: 0 15px 0 15px;
-                    font-weight: 500;
-                    }
-
-                    &::after{
-                         @include after($color-dark);
-                    }
-
-                    &:hover::after{
-                         width: 30%;
-                    }
-
-               }
+          span {
+            @include theme(color, $color-lemon-dark, null);
           }
-
-
-          .dropdownn{
-               position: relative;
-
-               .active,
-               .link:hover{
-                    color: $color-dark;
-               }
-
-               .dropdownn-menu{
-                    position: absolute;
-                    right: 0;
-                    top: calc(100% + .25rem);
-                    background-color: $color-light-bg;
-                    padding: .75rem;
-                    border-radius: .25rem;
-                    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
-                    z-index: 1;
-                    opacity: 0;
-                    pointer-events: none;
-                    transform: translateY(-10px);
-                    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-
-                    input{
-                         @extend .borderBottom;
-                         margin-top: 10px;
-
-                         &:focus{
-                              outline: none;
-                         }
-                    }
-
-                    .loginBtn{
-                         @include theme(background, #4CD7D0, dark);
-                         border: none;
-                         border-radius: 5px;
-                         padding: 2px 10px;
-
-                         &:hover{
-                              @include theme(background, #34b6b0, dark);
-                         }
-                    }
-
-                    p{
-                         padding-top: 10px;
-                         margin-bottom: 0;
-
-                         span{
-                              @include theme(color, $color-lemon-dark, null);
-                         }
-                    }
-               }
-               .active  {
-                    opacity: 1;
-                    transform: translateY(0);
-                    pointer-events: auto;
-               }
-          }
-     }
+        }
+      }
+      .active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+    }
+  }
 }

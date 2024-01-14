@@ -2,74 +2,67 @@
   border: $width solid $color;
 }
 
-
-@mixin theme($property, $color, $type:null) {
-    @if $type == 'light'{
-      #{$property}: $color;
-      color: $color-dark;
-    }
-
-    @else if $type == 'dark'{
-      #{$property}: $color;
-      color: $color-light-bg;
-
-    }
-
-    @else{
-      #{$property}: $color;
-    }
+@mixin theme($property, $color, $type: null) {
+  @if $type == "light" {
+    #{$property}: $color;
+    color: $color-dark;
+  } @else if $type == "dark" {
+    #{$property}: $color;
+    color: $color-light-bg;
+  } @else {
+    #{$property}: $color;
+  }
 }
 
-@mixin before($color){
-	  position: absolute; 
-		left: 0;
-		bottom: 0;
-		content: "";
-		display: block;
-		width: 100%;
-		height: 100%;
-		background-color: $color;
-		transform-origin: 0 bottom 0;
-		transform: scaleX(0);
-		transition: .4s ease-out;
+@mixin before($color) {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $color;
+  transform-origin: 0 bottom 0;
+  transform: scaleX(0);
+  transition: 0.4s ease-out;
 }
 
-@mixin after_1($color){
-	  position: absolute; 
-		left: 0;
-		bottom: 0;
-		content: "";
-		display: block;
-		width: 100%;
-		height: 100%;
-		background-color: $color;
-		transform-origin: 0 bottom 0;
-		transform: scaleX(1);
-		transition: .4s ease-out;
+@mixin after_1($color) {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $color;
+  transform-origin: 0 bottom 0;
+  transform: scaleX(1);
+  transition: 0.4s ease-out;
 }
 
-@mixin after($color){
-	  content: "";
-    width:0;
-    height: 1px;
-    background-color: $color;
-    margin: auto;
-    margin-left: 16px;
-    display: block;
-    transition: width 0.5s;
+@mixin after($color) {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: $color;
+  margin: auto;
+  margin-left: 16px;
+  display: block;
+  transition: width 0.5s;
 }
 
-@mixin hover($color){
-	  @extend .cursor;
-    .textTag{
-      color: $color;
-    }
+@mixin hover($color) {
+  @extend .cursor;
+  .textTag {
+    color: $color;
+  }
 
-    &:before {
-			transform: scaleX(1);
-		}
-    &:after {
-			transform: scaleX(0);
-		}
+  &:before {
+    transform: scaleX(1);
+  }
+  &:after {
+    transform: scaleX(0);
+  }
 }
-

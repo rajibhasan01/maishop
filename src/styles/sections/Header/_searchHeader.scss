@@ -1,97 +1,90 @@
-.dropDown{
-    @extend .searchBar;
-    @include theme(background, $color-transparent-bg, light);
-    @include bordered(white, 1px);
-    &:focus{
-        box-shadow: none!important;
-    }
-    
+.dropDown {
+  @extend .searchBar;
+  @include theme(background, $color-transparent-bg, light);
+  @include bordered(white, 1px);
+  &:focus {
+    box-shadow: none !important;
+  }
 }
-.dropDownItem{
-       width: $width_full;
-        @include bordered($color-gray, 1px);
-
-} 
-
+.dropDownItem {
+  width: $width_full;
+  @include bordered($color-gray, 1px);
+}
 
 // black friday offer container
-.offer{
-    @extend .searchBar;
-    @include bordered(white, 1px);
-    text-align: center;
-    position: relative;
-    font-weight: 700;
+.offer {
+  @extend .searchBar;
+  @include bordered(white, 1px);
+  text-align: center;
+  position: relative;
+  font-weight: 700;
 
-    .blockquote-footer{
-        line-height: 10px;
-        font-weight: 400;
-    }
+  .blockquote-footer {
+    line-height: 10px;
+    font-weight: 400;
+  }
 
-    &:before {
-	    @include before($color-dark);
-	}
+  &:before {
+    @include before($color-dark);
+  }
 
-    &:hover{
-       @include hover($color-light-bg);
-    }
-
+  &:hover {
+    @include hover($color-light-bg);
+  }
 }
 
-
 // input search container box
-.search{
-    @extend .searchBar;
-    @include bordered($color-gray, 1px);
-    margin-left: 1px;
-    text-align: center;
+.search {
+  @extend .searchBar;
+  @include bordered($color-gray, 1px);
+  margin-left: 1px;
+  text-align: center;
+  display: flex;
+
+  input {
+    width: 75%;
+    height: $height_full;
+    @extend .borderRight;
     display: flex;
+    padding-left: 10px;
 
-    input{
-        width: 75%;
-        height: $height_full;
-        @extend .borderRight;
-        display: flex;
-        padding-left: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
 
-        &:focus{ 
-            outline: none;
-        }
+  .dropDownSearch {
+    width: $width_full;
+    height: $height_full;
+    @extend .borderRight;
+    @include theme(background, $color-transparent-bg, light);
+
+    &:focus {
+      box-shadow: none !important;
+      @include theme(background, $color-transparent-bg, light);
+    }
+  }
+
+  .dropDownItemSearch {
+    transform: translate(0px, 50px) !important;
+  }
+
+  .searchBox {
+    @include theme(background, $color-yellow, light);
+    @extend .cursor;
+    border-radius: 0 4px 4px 0;
+    width: 25%;
+    font-size: 16px;
+    height: $height_full;
+    line-height: 48px;
+    position: relative;
+
+    &:before {
+      @include before($color-yellow-dark);
     }
 
-    .dropDownSearch{
-       width: $width_full;
-       height: $height_full;
-       @extend .borderRight;
-       @include theme(background, $color-transparent-bg, light);
-
-        &:focus{
-            box-shadow: none!important;
-            @include theme(background, $color-transparent-bg, light);
-            }
+    &:hover {
+      @include hover($color-light-bg);
     }
-
-    .dropDownItemSearch{
-        transform: translate(0px, 50px)!important;
-    }
-
-    .searchBox{
-        @include theme(background, $color-yellow, light);
-        @extend .cursor;
-        border-radius: 0 4px 4px 0;
-        width: 25%;
-        font-size: 16px;
-        height: $height_full;
-        line-height: 48px;
-        position: relative;
-
-        &:before {
-	        @include before($color-yellow-dark);
-	    }
-
-        &:hover{
-            @include hover($color-light-bg);
-        }
-
-    }
-
+  }
 }

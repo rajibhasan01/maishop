@@ -1,27 +1,27 @@
-.searchBar{
-    width: 100%;
-    height: $height-base-size;
-    margin-top: $margin-base-size;
-    margin-bottom: $margin-base-size;
+.searchBar {
+  width: 100%;
+  height: $height-base-size;
+  margin-top: $margin-base-size;
+  margin-bottom: $margin-base-size;
 }
 
-.borderRight{
-    border: none;
-    border-right: 1px solid $color-dark;
-    border-radius: 0px;
+.borderRight {
+  border: none;
+  border-right: 1px solid $color-dark;
+  border-radius: 0px;
 }
 
-.borderBottom{
-    border: none;
-    border-bottom: 1px solid $color-dark;
-    border-radius: 0px;
+.borderBottom {
+  border: none;
+  border-bottom: 1px solid $color-dark;
+  border-radius: 0px;
 }
 
-.cursor{
-    cursor: pointer;
+.cursor {
+  cursor: pointer;
 }
 
-.textTag{
-	position: relative;
-	transition: .4s ease-out;
+.textTag {
+  position: relative;
+  transition: 0.4s ease-out;
 }
