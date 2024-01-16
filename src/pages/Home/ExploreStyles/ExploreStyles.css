@@ -1,0 +1,20 @@
+.vertical_text_layout {
+  writing-mode: vertical-lr;
+  /* font-size: clamp(1.25rem, 0.85rem + 2vw, 2.5rem); */
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.vertical_text_layout p {
+    text-orientation: mixed;
+}
+
+.stylebox{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.stylebox .item:first-child{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+}

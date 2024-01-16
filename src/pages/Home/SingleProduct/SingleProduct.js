@@ -156,6 +156,22 @@ const SingleProduct = () => {
     e.preventDefault();
   };
 
+  const options = [40, 41, 42];
+
+  const [selectedValue, setSelectedValue] = useState(options[0]);
+
+  const handleValueClick = (value) => {
+    setSelectedValue(value);
+  };
+
+  const colorOptions = ["#fff", "#000", "#FF0000"];
+
+  const [selectedColor, setSelectedColor] = useState(options[0]);
+
+  const handleColorClick = (value) => {
+    setSelectedColor(value);
+  };
+
   return (
     <>
       <Header />
@@ -233,46 +249,55 @@ const SingleProduct = () => {
                     }
                   />
                 </div>
-                <small className="text-muted shadowsFont">
-                  2,345 reviews
+                <small className="text-muted shadowsFont">2,345 reviews</small>
+              </div>
+              <div className="mt-1">
+                <small className="shadowsFont fw-bold">
+                  {singleItem.availability === "In Stock" && (
+                    <span className="shadowsFont rounded bg-white text-success">
+                      In Stock
+                    </span>
+                  )}
+
+                  {singleItem.availability === "Sold Out" && (
+                    <span className="shadowsFont rounded bg-secondary text-white">
+                      Sold Out
+                    </span>
+                  )}
                 </small>
               </div>
 
+              <div className="mt-3">
+                <h5 className="shadowsFont text-muted">Color</h5>
+                <div className="d-flex color-box rounded">
+                  {colorOptions.map((option) => (
+                    <div
+                      key={option}
+                      className={`size-selector color-selector rounded ${
+                        selectedColor === option ? "selected" : ""
+                      }`}
+                      onClick={() => handleColorClick(option)}
+                      style={{ backgroundColor: `${option}` }}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+
               <fieldset className="mt-3">
-                <Form.Group
-                  as={Row}
-                  className="mb-3"
-                  onSubmit={haneldeSizeSelection}
-                >
-                  <h5 className="shadowsFont text-muted">Select Size</h5>
-                  <Col sm={10}>
-                    <Form.Check
-                      type="radio"
-                      label="Small"
-                      name="size"
-                      value="sm"
-                      id="formHorizontalRadios1"
-                      defaultChecked
-                      onChange={handleOnChange}
-                    />
-                    <Form.Check
-                      type="radio"
-                      label="Large"
-                      name="size"
-                      value="lg"
-                      id="formHorizontalRadios2"
-                      onChange={handleOnChange}
-                    />
-                    <Form.Check
-                      type="radio"
-                      label="Extra Large"
-                      name="size"
-                      value="xl"
-                      id="formHorizontalRadios3"
-                      onChange={handleOnChange}
-                    />
-                  </Col>
-                </Form.Group>
+                <h5 className="shadowsFont text-muted">Size Selector</h5>
+                <div className="d-flex">
+                  {options.map((option) => (
+                    <div
+                      key={option}
+                      className={`size-selector rounded-circle me-3 ${
+                        selectedValue === option ? "selected" : ""
+                      }`}
+                      onClick={() => handleValueClick(option)}
+                    >
+                      {option}
+                    </div>
+                  ))}
+                </div>
               </fieldset>
 
               <div className="mt-2">

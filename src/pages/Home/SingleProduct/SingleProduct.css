@@ -13,6 +13,7 @@
 
 .btnContainer{
     background-color: #f2f2f2;
+    backdrop-filter: blur(4px);
 }
 
 .btnContainer:hover{
@@ -22,4 +23,69 @@
 
 .checked{
     background-color: rgb(10, 10, 10)!important;
+}
+
+.size-selector{
+    flex-basis: 28px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    backdrop-filter: blur(4px);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid #f2f2f2;
+    outline: 2px solid #f2f2f2;
+    transition: 350ms all ease-in-out;
+    overflow: hidden;
+}
+
+.size-selector:not(:last-child){
+    margin-right: 16px;
+}
+
+.size-selector.selected{
+    outline: 2px solid black;
+    color: white;
+    background-color: rgb(2, 2, 59);
+    border: 2px solid white;
+}
+
+.color-box{
+    background-color: #f2f2f2;
+    backdrop-filter: blur(4px);
+    padding: 10px;
+    width: min-content;
+    border-radius: 5px;
+}
+
+.color-selector {
+    outline: none;
+    border: none;
+    flex-basis: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.color-selector.selected {
+    position: relative;
+    outline: none;
+    border: none;
+}
+
+.color-selector.selected::after {
+    content: '';
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: #ff5927;
+    font-size: 24px;
+    outline: none;
+    border: none;
 }
