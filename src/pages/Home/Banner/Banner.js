@@ -2,8 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='px-md-5'>
-            <div className='container-fluid mt-2'>
+            <div className='container mt-2'>
                 <div className="row g-2">
                     <div className="col-12 col-md-9 pe-md-2 BannerImgContainer">
                         <div className='w-100'>
@@ -29,8 +28,6 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-        </div>
-
     );
 };
 

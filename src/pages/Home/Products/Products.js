@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import Product from "../Product/Product";
-import ProductsHeading from "../ProductsHeading/ProductsHeading";
-import AllProductsHeading from "../ProductsHeading/AllProductsHeading";
+import ProductsHeading from "../../../components/Shared/ProductsHeading/ProductsHeading";
+import AllProductsHeading from "../../../components/Shared/ProductsHeading/AllProductsHeading";
 import "./Products.css";
 import useAuth from "../../../hooks/useAuth";
 
@@ -62,7 +62,7 @@ const Products = ({ value }) => {
     <div className="container mt-5">
       {value ? (
         <div className="text-center">
-          <AllProductsHeading />
+          <AllProductsHeading subtitle={"We provide 100% authentic and fresh products!"} title={"Our Products"} />
           <div className="text-start buttonBox ps-md-5">
             <button
               className={

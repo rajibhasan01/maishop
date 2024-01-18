@@ -1,0 +1,27 @@
+/* .horizontal_line{
+    position: relative;
+}
+
+.horizontal_line::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    background-color: red;
+} */
+.titleText{
+    position: relative;
+    display: inline-block;
+}
+
+.titleText::after{
+    content: "";
+    width: 70px;
+    height: 2px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 35px;
+    background-color: rgba(4, 104, 4, 0.5);
+    border: 0;
+    margin-bottom: 10px;
+}
