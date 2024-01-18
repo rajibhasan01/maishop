@@ -41,23 +41,14 @@ const Product = ({ value, spd, item }) => {
           <Card.Text className="productArrival">{product_arrival}</Card.Text>
         )}
 
-        <Card.Body className="ps-0 pb-0">
+        <Card.Body className="px-0 py-2">
           <Card.Title className="text-title">
             <span>{product_name}</span>
-            <span className="text-danger">
-              ${product_price.sm}
-            </span>
           </Card.Title>
-          <Card.Text className="text-muted text-justify">
-            {product_title.slice(0, 45)} jhgjhlkjl kjhlhf mmffhjgkh hchnjgkjh.....
-          </Card.Text>{" "}
-          <Link
-            className="text-decoration-none login-cursor bg-dark px-2 text-white rounded fs-6 read-more"
-            to={`/products/${item._id}`}
-          >
-            Details
-            <MdIconName.MdDoubleArrow className="fs-5 icon-background ms-2" />{" "}
-          </Link>
+          <div className="d-flex justify-content-between align-items-center">
+            <span>Nike Original</span>
+            <span className="text-danger">${product_price.sm}</span>
+          </div>
         </Card.Body>
       </Card>
     </Col>
