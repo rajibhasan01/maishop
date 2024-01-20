@@ -15,7 +15,7 @@ const Shoes = () => {
     centerMode: true,
     infinite: true,
     centerPadding: "0px",
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,

@@ -21,7 +21,7 @@ const ExploreStyles = () => {
       </div>
       <section className="d-flex gap-3 align-items-center">
         <div className="vertical_text_layout">
-          <p className="m-0"> EXPLORE NEW AND POPULAR STYLES </p>
+          <p className="m-0"> EXPLORE NEW AND POPULAR STYLES WITH OUR PRODUCTS </p>
         </div>
         <div className="stylebox">
           {items?.map((item) => (
