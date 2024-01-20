@@ -8,10 +8,6 @@ const NavHeader = ({ toggle }) => {
     return (
         <div className='px-md-5'>
             <div className="navDesign container-fluid d-none d-md-flex">
-                <div className="image cursor">
-                    <img src="https://i.ibb.co/fY3z6BC/isla-500x500-37673648-ak449n55-removebg-preview.png" alt="" className="img-fluid" />
-                </div>
-
 
                 <ul className="my-auto">
                     <li><NavLink to="/home" className="navlink" activeClassName="selected"> Home</NavLink></li>

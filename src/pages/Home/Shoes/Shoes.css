@@ -1,21 +1,27 @@
 .horizontal_text_layout {
-    text-align: center;
-    /* font-size: clamp(1.25rem, 0.85rem + 2vw, 2.5rem); */
-    font-size: 44px;
-    letter-spacing: 2px;
-    font-weight: 500;
-  }
-
-.robotoFont{
-    text-align: left;
-    font-size: 14px;
+  text-align: center;
+  /* font-size: clamp(1.25rem, 0.85rem + 2vw, 2.5rem); */
+  font-size: 44px;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
-.shoeBtn{
+.robotoFont {
+  text-align: left;
+  font-size: 14px;
+}
 
-    border: 1px solid lightgray;
-    border-radius: 0px;
-    border-bottom: 1px solid #fff;
-    color: rgb(161, 0, 0) !important;
-    font-weight: 500;
+.shoeBtn {
+  border: 1px solid lightgray;
+  border-radius: 0px;
+  border-bottom: 1px solid #fff;
+  color: rgb(161, 0, 0) !important;
+  font-weight: 500;
+}
+
+/* Move text into header on mobile devices */
+@media (max-width: 767px) {
+  .slick-next {
+    display: none !important;
+  }
 }
