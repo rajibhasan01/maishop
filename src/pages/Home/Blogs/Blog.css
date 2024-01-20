@@ -1,0 +1,15 @@
+.BlogBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.BlogBox .item:first-child {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+}
+
+.BlogBox .item:last-child{
+  grid-column-start: 3;
+  grid-column-end: 5;
+}

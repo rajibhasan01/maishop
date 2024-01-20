@@ -1,20 +1,65 @@
 .vertical_text_layout {
-  writing-mode: vertical-lr;
-  /* font-size: clamp(1.25rem, 0.85rem + 2vw, 2.5rem); */
-  font-size: 22px;
-  letter-spacing: 2px;
-}
+    display: none;
+    writing-mode: vertical-lr;
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    letter-spacing: 10px;
+    color: #e0e0e0;
+  }
 
-.vertical_text_layout p {
+  .vertical_text_layout p {
     text-orientation: mixed;
-}
+  }
 
-.stylebox{
+  .header-mobile-text {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .stylebox {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
 
-.stylebox .item:first-child{
+  .stylebox .item:first-child {
     grid-row: 1 / span 2;
     grid-column: 1 / span 2;
-}
+  }
+
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    .stylebox {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .stylebox {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Show vertical text on large screens */
+    .vertical_text_layout {
+      display: block;
+    }
+
+    /* Hide vertical text on medium screens */
+    @media (max-width: 1199px) {
+      .vertical_text_layout {
+        display: none;
+      }
+    }
+  }
+
+  /* Move text into header on mobile devices */
+  @media (max-width: 767px) {
+    .vertical_text_layout {
+      display: none;
+    }
+    .stylebox {
+        gap: 0px;
+        row-gap: 10px;
+      }
+  }

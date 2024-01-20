@@ -6,7 +6,7 @@ import Footer from '../../../components/Shared/Footer/Footer';
 import ExploreStyles from '../ExploreStyles/ExploreStyles';
 import Shoes from '../Shoes/Shoes';
 import AllProductsHeading from '../../../components/Shared/ProductsHeading/AllProductsHeading';
-
+import Blogs from '../Blogs/Blogs';
 
 const Home = () => {
     return (
@@ -18,6 +18,7 @@ const Home = () => {
             <Shoes />
             <Shoes />
             <Shoes />
+            <Blogs />
             <Products />
             <Footer />
         </div>

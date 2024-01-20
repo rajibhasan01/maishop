@@ -1,23 +1,20 @@
 import React from "react";
-import "./ExploreStyle.css";
 import { Card } from "react-bootstrap";
+import "./Blog.css";
 
-const ExploreStyle = ({  item }) => {
-  const {
-    product_image,
-  } = item;
+const Blog = ({ item }) => {
 
   return (
-    <Card className="item">
+    <Card className="item bg-primary">
       <div className="image-box ">
         <Card.Img
           variant="top"
           className="card-image hoverImage blogImage"
-          src={product_image}
+          src={item}
         />
       </div>
     </Card>
   );
 };
 
-export default ExploreStyle;
+export default Blog;
